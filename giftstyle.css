@@ -2,7 +2,7 @@
 * @Author: Dell
 * @Date:   2019-12-25 18:40:41
 * @Last Modified by:   Dell
-* @Last Modified time: 2019-12-25 20:40:53
+* @Last Modified time: 2019-12-25 22:26:02
 */
         	*{
                 margin: 0px;
@@ -67,8 +67,8 @@
             }
             #list input{
                 float:left;
-                margin-left:200px;
-                margin-top:75px;
+                margin-left:150px;
+                margin-top:35px;
                 border:none;
                 background-color:transparent;
                 font-weight: bold;
