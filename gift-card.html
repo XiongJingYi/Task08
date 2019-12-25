@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>giftcard</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="giftstyle.css">
+    </head>
+    <body>
+        <div id="header">
+             <div id="header1">
+                <a onclick="list()"><img src="imgs/xx.png" alt="列表框"/></a>
+            </div>
+            <div id="header2">
+                <a href=" "><img src="imgs/gift cards .png" alt="gift card"/></a>
+            </div>
+            <div id="header3">
+                <a onclick="fn()"><img src="imgs/1__ZSPNO2UB[O2SVT4@25VB.png" id="searchimg" alt="搜索"></a>
+                <a href="登陆.html"><img src="imgs/[1P[CXL72V6DCD4KNSQ}EJX.png" alt="个人中心"></a>
+                <a href="#" id="car"><img src="imgs/shoppingcar.png" alt="购物车">
+                </a>
+                <input id="count" type="submit" name="count" value="0">
+            </div>
+        </div>
+        <div id="list">
+            <a href="lips.html"><input class="lips" type="button" namer="lips" value="lips"></a>
+            <a href="blink.html"><input class="blink" type="button" namer="lips" value="BLINK"></a>
+            <a href="skin.html"><input class="skin" type="button" namer="lips" value="SKIN"></a>
+            <a href="tools.html"><input class="tools" type="button" namer="lips" value="TOOLS"></a>
+            <a href="gift-card.html"><input class="gift cards" type="button" namer="lips" value="GIFT CARDS"></a>
+        </div>
+        <div id="shopcar">
+            <h3>Shopping Cart</h3>
+            <ul id="list">
+            </ul>
+            <button id="Delete">Delete</button>
+            <button id="close">close</button>
+        </div>
+        <div id="search">
+            <input class="search" type="text" name="email" placeholder=" tell me what you want">
+            <input class="searchbtn" type="button" name="enter" value="enter">
+        </div>
+
+        <div id="containner">                 
+        <div id="giftCard">
+            <img id="img1" src="imgs/e-gift-card-lp-banner-mobile.webp" alt="gift-card"/>
+        </div>
+        <div id="cards">
+            <ul>
+                <li>
+                    <img src="imgs/ff.png" alt="img1" class="imgs" />
+                    <div>
+                        <p>sagittarius e-gift card</p>
+                        <button type="button" name="sagittarius card">choose amount</button>
+                    </div>
+                </li> 
+                <li>
+                    <img src="imgs/GiftCards_Just_Because_680x.webp" alt="img2" class="imgs" />
+                    <div>
+                        <p>just beaucause e-gift card</p>
+                        <button type="button" name="just beaucause card">choose amount</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/GiftCards_You_re_my_favorite_680x.webp" alt="img3" class="imgs" />
+                    <div>
+                        <p>you're my fave e-gift card</p>
+                        <button type="button" name="you're my fave card">choose amount</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/GiftCards_thank_you_680x.webp" alt="img4" class="imgs" />
+                    <div>
+                        <p>thank you e-gift card</p>
+                        <button type="button" name="thank you card">choose amount</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/GiftCards_tis_the_szn_680x.webp" alt="img5" class="imgs"/>
+                    <div>
+                        <p>tis the szn e-gift card</p>
+                        <button type="button" name="tis the szn card">choose amount</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/GiftCards_TYSM_copy_680x.webp" alt="img6" class="imgs"/>
+                    <div>
+                        <p>tysm e-gift card</p>
+                        <button type="button" name="tysm card">choose amount</button>
+                    </div>
+                </li>
+            </ul>
+        </div>  
+    </div>      
+        <div id="copyright">
+            <p class="word">get exclusive access & 10% off</p>
+            <p class="word">when you sign up for our newsletter!</p>
+        <div id="email">
+            <div>
+                <input class="email" type="text" name="email" placeholder="email address">
+                <input class="enter" type="button" name="enter" value="enter">
+            </div>
+            <div id="p3">By entering your email address you will receive promotional updates. Consent is not a condition of purchase. View Privacy Policy. 10% off discount eligible for first time customers only. Discount requires a minimum order of $20. Exclusions apply. Your code will be sent via email.
+            </div>
+        </div>
+        <div id="about">
+            <p><a href="#">ABOUT</a></p>
+            <p><a href="#">FAQ</a></p>
+            <p><a href="#">STUDENT DISCOUNT</a></p>
+            <p><a href="#">TERMS</a></p>
+            <p><a href="PRIVACY POLICY"></a></p>
+            <p><a href="CONTACT US"></a></p>
+            <p><a href="#">ACCESSIBILITY STATEMENT</a></p>
+        </div>
+    </div>
+    
+    </body>
+
+    <script type="text/javascript">
+        var btnlist=document.getElementsByTagName("button");
+        var count = document.getElementById("count");
+        var list=document.getElementById("list");
+        var Delete =document.getElementById("Delete");
+        var shopcar = document.getElementById("shopcar");
+        var close =document.getElementById("close");
+        var car =document.getElementById("car");
+
+        var num=0;
+        for(var i=0;i<btnlist.length;i++){
+            btnlist[i].onmouseover=function(){
+                this.style.backgroundColor="white";
+                this.style.color="black";
+            }
+        }
+        for(var i=0;i<btnlist.length;i++){
+            btnlist[i].onmouseout=function(){
+                this.style.backgroundColor="black";
+                this.style.color="white";
+            }
+        }
+        for(var i=0;i<btnlist.length;i++){
+            btnlist[i].onclick=function(){
+                this.blur();
+                num++;
+                count.setAttribute("value",num);
+                var aname=this.getAttribute("name");
+                shopcar.style.display="block";
+                var liNode=document.createElement("li");
+                var liCount=list.children.length+1; 
+                liNode.innerHTML=liCount+"."+aname;
+                list.appendChild(liNode);
+            }
+        }
+        
+        function fn(){
+        	document.getElementById("search").style.display="block";
+        }
+       
+        Delete.onclick=function(){
+            if(list.hasChildNodes()){
+                list.removeChild(list.lastChild);
+            }
+        }
+        close.onclick=function(){
+            shopcar.style.display="none";
+        }
+        car.onclick=function(){
+            shopcar.style.display="block";
+        }
+        function list(){
+            document.getElementById("list").style.display="block";
+            document.getElementById("header1").style.display="none";
+            document.getElementById("header2").style.display="none";
+            document.getElementById("header3").style.display="none";
+        }
+	</script>
+</html>
