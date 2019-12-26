@@ -31,7 +31,7 @@
   	<div class="imgs">
   		<div>
             <div class="img">
-                <a href=""><img src="lips_imgs/img1.JPG" alt="img1"></a>
+                <a href=""><img id="lips_img1" src="lips_imgs/img1.JPG" alt="img1"></a>
             </div>
             <p>MAC</p>
             <p>#畅销产品</p>
@@ -48,7 +48,7 @@
         </div>
         <div>
             <div class="img">
-                <a href=""><img src="lips_imgs/img2.JPG" alt="img1"></a>
+                <a href=""><img id="lips_img2" src="lips_imgs/img2.JPG" alt="img1"></a>
             </div>
             <p>MAC</p>
             <p>#畅销产品</p>
@@ -65,7 +65,7 @@
         </div>
         <div>
             <div class="img">
-                <a href=""><img src="lips_imgs/img3.JPG" alt="img1"></a>
+                <a href=""><img id="lips_img3" src="lips_imgs/img3.JPG" alt="img1"></a>
             </div>
             <p>MAC</p>
             <p>#畅销产品</p>
@@ -82,7 +82,7 @@
         </div>
         <div>
             <div class="img">
-                <a href=""><img src="lips_imgs/img4.JPG" alt="img1"></a>
+                <a href=""><img id="lips_img4" src="lips_imgs/img4.JPG" alt="img1"></a>
             </div>
             <p>MAC</p>
             <p>#畅销产品</p>
@@ -99,7 +99,7 @@
         </div>
         <div>
             <div class="img">
-                <a href=""><img src="lips_imgs/img5.JPG" alt="img1"></a>
+                <a href=""><img  id="lips_img5" src="lips_imgs/img5.JPG" alt="img1"></a>
             </div>
             <p>MAC</p>
             <p>#畅销产品</p>
@@ -116,7 +116,7 @@
         </div>
         <div>
             <div class="img">
-                <a href=""><img src="lips_imgs/img6.JPG" alt="img1"></a>
+                <a href=""><img id="lips_img6" src="lips_imgs/img6.JPG" alt="img1"></a>
             </div>
             <p>MAC</p>
             <p>#畅销产品</p>
@@ -256,6 +256,66 @@
     </div>
 </body>
 <script type="text/javascript">
+    var lips_img1 = document.getElementById('lips_img1');
+    lips_img1.onmouseover = function(){
+        lips_img1.src = "lips_imgs/img7.jpg";
+    }
+    lips_img1.onmouseout = function(){
+        lips_img1.src = "lips_imgs/img1.jpg";
+    }
+    var lips_img2 = document.getElementById('lips_img2');
+    lips_img2.onmouseover = function(){
+        lips_img1.src = "lips_imgs/img8.jpg";
+    }
+    lips_img2.onmouseout = function(){
+        lips_img1.src = "lips_imgs/img1.jpg";
+    }
+    var lips_img3 = document.getElementById('lips_img3');
+    lips_img3.onmouseover = function(){
+        lips_img1.src = "lips_imgs/img9.jpg";
+    }
+    lips_img3.onmouseout = function(){
+        lips_img1.src = "lips_imgs/img1.jpg";
+    }
+
+
+    var lips_img4 = document.getElementById('lips_img4');
+    lips_img4.onmouseover = function(){
+        lips_img4.src = "lips_imgs/img10.jpg";
+    }
+    lips_img4.onmouseout = function(){
+        lips_img4.src = "lips_imgs/img4.jpg";
+    }
+    var lips_img5 = document.getElementById('lips_img5');
+    lips_img5.onmouseover = function(){
+        lips_img5.src = "lips_imgs/img11.jpg";
+    }
+    lips_img5.onmouseout = function(){
+        lips_img5.src = "lips_imgs/img5.jpg";
+    }
+    var lips_img6 = document.getElementById('lips_img6');
+    lips_img6.onmouseover = function(){
+        lips_img6.src = "lips_imgs/img12.jpg";
+    }
+    lips_img6.onmouseout = function(){
+        lips_img6.src = "lips_imgs/img6.jpg";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    //商品评分 
    var pic1 = document.getElementById('pic1');
    var images1 = pic1.getElementsByTagName('img');
