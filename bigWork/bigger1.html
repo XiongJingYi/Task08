@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DIOR1</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+	<div id="box">
+		<div id="img1">
+			<img src="images/1.jpg" width="300" height="300" id="Simg"/>
+			<div id="slider"></div>
+			<p style="color:#dbc">DIOR-迪奥凝脂恒久气垫粉底IT girl礼盒 传奇红+明星气垫 迪奥臻献 惊艳出世-烈艳蓝金唇膏999 限量版</p>
+		</div>
+		<div id="img2">
+			<img src="images/1.jpg" id="Bimg">
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var box = document.getElementById("box");
+	var img1 = document.getElementById("img1");
+	var Simg = document.getElementById("Simg");
+	var slider = document.getElementById("slider");
+	var img2 = document.getElementById("img2");
+	var Bimg = document.getElementById("Bimg");
+	img1.onmouseover = function() {
+		slider.style.display="block";
+		img2.style.display = "block";
+	}
+	img1.onmouseout = function() {
+		slider.style.display="none";
+		img2.style.display = "none";
+	}
+	img1.onmousemove = function(e) {
+		var mouseX = e.clientX;//相对于整个页面,鼠标X轴坐标
+		var mouseY = e.clientY;//相对于整个页面,鼠标Y轴坐标
+		var boxLeft = box.offsetLeft;//子元素相对于父元素的左位移
+		var boxTop = box.offsetTop;//子元素相对于父元素的上位移
+		console.log(boxLeft);
+		console.log(boxTop);
+		var sliderWidth = slider.offsetWidth;//元素自身的宽度
+		var sliderHeight = slider.offsetHeight;//元素自身的高度
+		console.log(sliderHeight);
+		var sliderLeft = mouseX-boxLeft-sliderWidth/2;
+		var sliderTop = mouseY-boxTop-sliderHeight/2;
+		if(sliderLeft <= 0){
+			sliderLeft = 0;
+		}
+		else if(sliderLeft >= (img1.offsetWidth - slider.offsetWidth)){
+		sliderLeft = img1.offsetWidth - slider.offsetWidth;
+		}
+		if(sliderTop<=0){
+			sliderTop=0;
+		}
+		else if(sliderTop>=(img1.offsetHeight - slider.offsetHeight)){
+			sliderTop = img1.offsetHeight - slider.offsetHeight;
+		}
+		slider.style.left = sliderLeft + 'px';
+		slider.style.top = sliderTop + 'px';
+
+		var percent = Bimg.offsetWidth/Simg.offsetWidth;
+		Bimg.style.left = (-sliderLeft*percent)+"px";
+		Bimg.style.top = (-sliderTop*percent)+"px";
+	}
+</script>
+</html>
