@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cherry POP</title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		ul li{
+			list-style: none;
+		}
+		#header{
+	    	float: left;
+	 		width: 100%;
+			height:80px ;
+			background: white;
+			position:fixed;-*
+		}
+		#header1{
+			float: left;
+			margin-left:220px;
+			margin-top: 8px;
+			transform:scale(0.7);
+		}
+		#header2{
+			float: left;
+			margin-left:320px;
+			margin-top:-15px;
+			transform:scale(0.7);
+		}
+		#header3{
+			float: left;
+			margin-left: 240px;
+			margin-top:19px ;
+			transform:scale(0.7);
+		}
+		#menu{
+			padding-top: 90px;
+			width: 100%;
+			height:50px;
+		}
+		#menu>a>img{
+			margin-top:5px;
+			height:40px;
+			
+		}
+		#img1{
+			margin-left:480px;
+		}
+		#banner{
+			width: 1400px;
+			height: 2000px;
+			margin-left:60px;
+			margin-top:50px;
+		}
+		#foundation{
+			width: 100%;
+			height:204px;
+			background-color: pink;
+		}
+		#banner li{
+			width:400px;
+			float:left;
+			margin-left:25px;
+		}
+		#banner p img{
+			height:94px;
+			padding-top:2px;
+		}
+		#banner ul li img{
+			width:400px;
+			height:400px;
+			float:left;
+			margin-left:50px;
+		}
+		#banner ul li p{
+			padding-left:60px;
+			text-align:center;
+			color:#cb6;
+		}
+		#banner ul li .p1{
+			font-size: 20px;
+		}
+		#banner ul li .p2 + .p3{
+			font-size: 14px;
+		}
+		
+
+
+
+		.btn{
+		    width: 165px;
+		    height: 50px;
+		    border: 1px #000 solid;
+		    display: inline-block;
+		    background: #fff;
+		    float: left;
+		    margin-top: 40px;
+		    margin-left:50px;
+		}
+		.quickview{
+		    width: 165px;
+		    height: 50px;
+		    border: 1px #000 solid;
+		    display: inline-block;
+		    background-color: #fff;
+		    margin-left: 10px;
+		    margin-top: 40px;
+		    float: left;
+		}
+
+
+
+		#copyright{
+    		text-align: center;
+    		margin-top: 80px;
+		}
+		#email{
+		    margin:0 auto;
+		    width: 705px;
+		    height: 51px;
+		    position: absolute;
+		    left: 50%; 
+		    margin-left: -350px;
+		}
+		.email{
+		    width: 70%;
+		    height: 50px;
+		    margin-top: 20px;
+		    border: 1px #000 solid;
+		    float: left;
+		    color: #ccc;    
+		}
+		.enter{
+		    width: 28.3%;
+		    height: 51px;
+		    border: 1px #000 solid;
+		    border-left:0px; 
+		    margin-top: 20px;
+		    background-color: #fff;
+		    float: left;
+		}
+		#p3{
+		    display: inline-block;
+		    width: 500px;
+		    margin-top: 10px;
+		    font-size: 10px;
+		    color: #ccc;
+		}
+		#about{
+		    margin:0 auto;
+		    width: 500px;
+		    height: 500px;
+		    position: absolute;
+		    left: 50%; 
+		    margin-top: 150px; 
+		    margin-left: -250px;
+		}
+		a{
+			text-decoration: none;
+			color: #000;
+		}
+
+
+
+			#search{
+                width: 100%;
+                height: 100px;
+                position: fixed;
+                top: 80px;
+                display: none;
+                background-color: #FFFAF0;
+            }
+            .search{
+                width: 450px;
+                height: 50px;
+                margin-top: 20px;
+                margin-left: 350px;
+                border: 1px #000 solid;
+                float: left;
+                color: #ccc;    
+            }
+            .searchbtn{
+                width: 150px;
+                height: 53px;
+                border: 1px #000 solid;
+                border-left:0px; 
+                margin-top: 20px;
+                background-color: #fff;
+                float: left;
+            }
+
+
+
+
+		#shopcar{
+		    height:300px;
+		    width: 250px;
+		    float: right;
+		    margin-top: 30px;
+		    text-align: center;
+		    position: fixed;
+		    top: 80px;
+		    display: none;
+		    background-color: #000;
+		    opacity :0.7;
+		    border-radius:40px 40px 40px 40px;
+		    color: #fff;
+		    margin-left: 2px;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<div id="search">
+        <input class="search" type="text" name="email" value=" tell me what you want">
+        <input class="searchbtn" type="button" name="enter" value="enter">
+    </div>
+	<div id="header">
+		<div id="header1">
+			<a href="#"><img src="images/menu.png" alt="列表框"/></a>
+		</div>
+		<div id="header2">
+			<img src="images/skin.png" alt="skin"/>
+		</div>
+
+		<div id="header3">
+			<div id="shopcar">
+				<h3>Shopping Cart</h3>
+				<ul id="list"></ul>
+				<button id="Delete">Delete</button>
+				<button id="close">close</button>
+			</div>
+			<a onclick="fn()"><img src="images/search.png" alt="搜索"></a>
+			<a href="#"><img src="images/personal.png" alt="登录></a>
+			<a href="" id="car"><img src="images/shoppingcar.png" alt="购物车"></a>
+			<input id="count" type="submit" name="count" value="0"/>
+		</div>
+	</div>
+	<div id="menu">
+		<a href=""><img src="images/blink.png"id="img1"/></a>
+		<a href=""><img src="images/gift cards .png"/></a>
+		<a href=""><img src="images/image.png"/></a>
+		<a href=""><img src="images/skin.png"></a>
+		<a href=""><img src="images/tools.png"></a>
+	</div>
+	<div id="banner">
+		<p id="foundation">
+			<marquee direction="left" behavior="scroll" scrollamount="100" scrolldelay="1000" width="100%">
+				<img src="images/timg1.jpg">
+				<img src="images/foundation1.jpg"/>
+				<img src="images/foundation2.jpg"/>
+				<img src="images/foundation3.jpg"/>
+				<img src="images/foundation4.jpg"/>
+				<img src="images/timg (7).jpg"/>
+				<img src="images/timg1.jpg">
+			</marquee>
+			<marquee direction="right" behavior="scroll" scrollamount="100" scrolldelay="1000" width="100%">
+				<img src="images/timg1.jpg">
+				<img src="images/foundation1.jpg"/>
+				<img src="images/foundation2.jpg"/>
+				<img src="images/foundation3.jpg"/>
+				<img src="images/foundation4.jpg"/>
+				<img src="images/timg (7).jpg"/>
+				<img src="images/timg1.jpg">
+			</marquee>
+		</p>
+		<ul id="banner1">
+			<li>
+				<a href="bigger1.html" target="_blank"><img src="images/1.jpg"></a>
+				<p class="p1">DIOR Lock makeup foundation</p>
+				<p class="p2">set</p>
+				<p class="p3">$120</p>
+				<input class="btn" type="submit" name="submit" value="add to bag">
+				<button class="quickview">quickview</button>
+			</li>
+			<li>
+				<a href="bigger2.html" target="_blank"><img src="images/2.jpg"></a>
+				<p class="p1">Dior Rose foundation</p>
+				<p class="p2">set</p>
+				<p class="p3">$200</p>
+				<input class="btn" type="submit" name="submit" value="add to bag">
+				<button class="quickview">quickview</button>
+			</li>
+			<li>
+				<a href="bigger3.html" target="_blank"><img src="images/3.jpg"></a>
+				<p class="p1">*DIORMANIA Limited edition</p>
+				<p class="p2">set</p>
+				<p class="p3">$100</p>
+				<input class="btn" type="submit" name="submit" value="add to bag">
+				<button class="quickview">quickview</button>
+			</li>
+			<li>
+				<a href="bigger4.html" target="_blank"><img src="images/4.jpg"></a>
+				<p class="p1">SULWHASOO Air cushion </p>
+				<p class="p2">size821</p>
+				<p class="p3">$50</p>
+				<input class="btn" type="submit" name="submit" value="add to bag">
+				<button class="quickview">quickview</button>
+			</li>
+			<li>
+				<a href="bigger5.html"><img src="images/5.jpg"></a>
+				<p class="p1">esteelauder DW perdurability</p>
+				<p class="p2">kit</p>
+				<p class="p3">$90</p>
+				<input class="btn" type="submit" name="submit" value="add to bag">
+				<button class="quickview">quickview</button>
+			</li>
+			<li>
+				<a href="bigger6.html"><img src="images/6.jpg"></a>
+				<p class="p1">cpb sun block 30ml</p>
+				<p class="p2">kit</p>
+				<p class="p3">￥389</p>
+				<input class="btn" type="submit" name="submit" value="add to bag">
+				<button class="quickview">quickview</button>
+			</li>
+			<li>
+				<a href="bigger7.html"><img src="images/7.jpg"></a>
+				<p class="p1">LANEIGE suncream</p>
+				<p class="p2">face milk</p>
+				<p class="p3">$51</p>
+				<input class="btn" type="submit" name="submit" value="add to bag">
+				<button class="quickview">quickview</button>
+			</li>
+			<li>
+				<a href="bigger8.html"><img src="images/8.jpg"></a>
+				<p class="p1">YSL NIGHT REBOOT SERUM</p>
+				<p class="p2">set</p>
+				<p class="p3">$66</p>
+				<input class="btn" type="submit" name="submit" value="add to bag">
+				<button class="quickview">quickview</button>
+			</li>
+			<li>
+				<a href="bigger9.html" target="_blank"><img src="images/9.jpg"></a>
+				<p class="p1">ARMANi GAC PRIMA GLOW-ON</p>
+				<p class="p2">kit</p>
+				<p class="p3">$79</p>
+				<input class="btn" type="submit" name="submit" value="add to bag">
+				<button class="quickview">quickview</button>
+			</li>
+		</ul>
+	</div>
+	<div id="copyright">
+		<p>get exclusive access & 10% off</p>
+		<p>when you sign up for our newsletter!</p>
+		<div id="email">
+			<div>
+				<input class="email" type="text" name="email" value="email address">
+				<input class="enter" type="button" name="enter" value="enter">
+			</div>
+			<div id="p3">By entering your email address you will receive promotional updates. Consent is not a condition of purchase. View Privacy Policy. 10% off discount eligible for first time customers only. Discount requires a minimum order of $20. Exclusions apply. Your code will be sent via email.
+			</div>
+		</div>
+		<div id="about">
+			<p><a href="#">ABOUT</a><p>
+			<p><a href="#">FAQ</a></p>
+			<p><a href="#">STUDENT DISCOUNT</a></p>
+			<p><a href="#">TERMS</a></p>
+			<p><a href="PRIVACY POLICY"></a></p>
+			<p><a href="CONTACT US"></a></p>
+			<p><a href="#">ACCESSIBILITY STATEMENT</a></p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var banner1 = document.getElementById("banner1");
+	var btn = document.getElementsByClassName("btn");
+	var quickview = document.getElementsByClassName("quickview");
+	var count = document.getElementById("count");
+	var num=0;
+	for(var i=0;i<btn.length;i++){
+		btn[i].onclick=function(){
+			this.blur();
+			num++;
+			count.setAttribute("value",num);
+			this.setAttribute("value","added!");
+			setTimeout(function(){
+				for(j=0;j<btn.length;j++){
+					btn[j].setAttribute("value","add to bag");					
+				}
+
+			},1200);
+			
+		}
+		btn[i].onmouseover=function(){
+			this.style.backgroundColor="#000";
+			this.style.color="#fff";
+		}
+		btn[i].onmouseout=function(){
+			this.style.backgroundColor="#fff";
+			this.style.color="#000";
+		}
+		quickview[i].onmouseover=function(){
+			this.style.borderColor="#ccc";
+			this.style.color="#aaa";
+		}
+		quickview[i].onmouseout=function(){
+			this.style.borderColor="#000";
+			this.style.color="#000";
+		}
+	}
+
+
+	function fn(){
+		document.getElementById("search").style.display="block";
+	}
+
+	var list=document.getElementById("list");
+	var Delete =document.getElementById("Delete");
+	var shopcar = document.getElementById("shopcar");
+	var close =document.getElementById("close");
+	var car =document.getElementById("car");
+
+	for(var i=0;i<btn.length;i++){
+		btn[i].onclick=function(){
+			var aname=this.getAttribute("name");
+			shopcar.style.display="block";
+			num++;
+			count.setAttribute("value",num);
+			this.setAttribute("value","added!");
+			setTimeout(function(){
+				for(j=0;j<btn.length;j++){
+					btn[j].setAttribute("value","add to bag");					
+				}
+			},1200)
+			var liNode=document.createElement("li");
+			var liCount=list.children.length+1;	
+			liNode.innerHTML=liCount+"."+aname;
+			list.appendChild(liNode);
+			Delete.onclick=function(){
+				if(list.hasChildNodes()){
+					list.removeChild(list.lastChild);
+				}
+			}
+			open.onclick=function(){
+				shopcar.style.display="none";
+			}
+			car.onclick=function(){
+				shopcar.style.display="block";
+			}
+		}
+	}
+	close.onclick = function(){
+		shopcar.style.display="none";
+	}
+
+</script>
+</html>
